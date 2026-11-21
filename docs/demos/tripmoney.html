@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TripMoney의 여행 경비 정산 기능을 가상 데이터로 시연합니다.">
+    <title>
+      TripMoney 시연 · 고재천 프로덕트 포트폴리오
+    </title>
+    <link rel="stylesheet" href="../assets/style.css">
+  </head>
+  <body class="demo-page">
+    <a class="skip" href="#demo">시연으로 건너뛰기</a>
+    <header class="mast wrap">
+      <a class="identity" href="../" aria-label="고재천 포트폴리오"><span class="monogram" aria-hidden="true"><i></i><i></i><i></i></span><b>고재천</b><span class="identity-role">플랫폼 PO</span></a>
+      <nav aria-label="주 메뉴">
+        <a href="../">제품 목록</a><a class="github" href="https://github.com/kojaecheon">GitHub</a>
+      </nav>
+    </header>
+    <main id="demo" class="studio">
+      <div class="wrap">
+        <header class="studio-heading">
+          <div>
+            <p class="kicker" lang="en">
+              TripMoney
+            </p>
+            <h1>
+              여행 경비 정산 시연<span>.</span>
+            </h1>
+          </div>
+          <p>
+            가상 데이터를 사용하는 프로토타입입니다.
+          </p>
+        </header>
+        <section class="demo-panel" aria-label="여행 경비 정산 조작 및 결과">
+          <div class="controls">
+            <h2>
+              저녁 식사비 나누기
+            </h2>
+            <p>
+              유나가 식사비를 결제했습니다. 금액과 함께 식사한 사람을 바꿔보세요.
+            </p>
+            <form id="trip-form" name="trip-form">
+              <label for="amount">결제 금액</label>
+              <div class="amount-wrap">
+                <input id="amount" type="text" inputmode="numeric" maxlength="13" value="90,000" aria-describedby="amount-error" autocomplete="off"><span>원</span>
+              </div><small id="amount-error" class="error" hidden="">1원부터 1,000,000원까지 정수로 입력하세요.</small>
+              <fieldset>
+                <legend>비용을 나눌 사람</legend>
+                <div class="checks">
+                  <span class="fixed">유나 · 결제자</span><label><input type="checkbox" name="member" value="민서" checked>민서</label><label><input type="checkbox" name="member" value="준호" checked>준호</label>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="result trip-result" aria-live="polite" aria-atomic="true">
+            <div class="result-head">
+              <b>정산 결과</b><span id="trip-count"></span>
+            </div>
+            <div class="value">
+              <span>유나가 받을 금액</span><strong id="trip-due"></strong>
+            </div>
+            <div id="transfers" class="result-list"></div><small id="rounding" hidden="">나누고 남은 1원씩은 결제자부터 차례로 부담합니다.</small>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="foot wrap">
+      <b>고재천 <span>플랫폼 PO</span></b><a href="../">제품 목록으로</a>
+    </footer>
+    <script src="../assets/demo-common.js"></script>
+    <script src="../assets/tripmoney.js"></script>
+  </body>
+</html>
