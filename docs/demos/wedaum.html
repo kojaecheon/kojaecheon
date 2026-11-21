@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WEDAUM의 후속 상담 인계 기능을 가상 데이터로 시연합니다.">
+    <title>
+      WEDAUM 시연 · 고재천 프로덕트 포트폴리오
+    </title>
+    <link rel="stylesheet" href="../assets/style.css">
+  </head>
+  <body class="demo-page">
+    <a class="skip" href="#demo">시연으로 건너뛰기</a>
+    <header class="mast wrap">
+      <a class="identity" href="../" aria-label="고재천 포트폴리오"><span class="monogram" aria-hidden="true"><i></i><i></i><i></i></span><b>고재천</b><span class="identity-role">플랫폼 PO</span></a>
+      <nav aria-label="주 메뉴">
+        <a href="../">제품 목록</a><a class="github" href="https://github.com/kojaecheon">GitHub</a>
+      </nav>
+    </header>
+    <main id="demo" class="studio">
+      <div class="wrap">
+        <header class="studio-heading">
+          <div>
+            <p class="kicker" lang="en">
+              WEDAUM
+            </p>
+            <h1>
+              후속 상담 인계 시연<span>.</span>
+            </h1>
+          </div>
+          <p>
+            가상 데이터를 사용하는 프로토타입입니다.
+          </p>
+        </header>
+        <section class="demo-panel" aria-label="후속 상담 인계 조작 및 결과">
+          <div class="controls">
+            <h2>
+              다음 담당자에게 상담 인계하기
+            </h2>
+            <p>
+              후속 연락이 필요한 상담을 선택하고 담당 팀에 인계해 보세요. 워크보드에 처리 결과가 표시됩니다.
+            </p><label for="case">상담 선택</label><select id="case">
+            </select><label for="team">인계할 팀</label><select id="team">
+              <option>
+                상담팀
+              </option>
+              <option>
+                예약팀
+              </option>
+              <option>
+                코디팀
+              </option>
+            </select>
+            <div class="wed-actions">
+              <button type="button" class="primary" id="handoff">인계하기</button><button type="button" class="reset" id="restart">처음부터</button>
+            </div>
+          </div>
+          <div class="result wed-result" aria-live="polite" aria-atomic="true">
+            <div class="result-head">
+              <b>상담 워크보드</b><span>가상 상담 3건</span>
+            </div>
+            <div class="value">
+              <span>인계 대기</span><strong id="wed-count"></strong>
+            </div>
+            <div id="case-list" class="result-list"></div><small id="handoff-status"></small>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="foot wrap">
+      <b>고재천 <span>플랫폼 PO</span></b><a href="../">제품 목록으로</a>
+    </footer>
+    <script src="../assets/demo-common.js"></script> 
+    <script src="../assets/wedaum.js"></script>
+  </body>
+</html>
